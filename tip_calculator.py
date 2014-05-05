@@ -1,9 +1,10 @@
 # Tip calculator exercise
 
 # assign variable meal as base price of meal, tax(%) for tax on meal, and tip(%) for the tip on the meal
-meal = 25.00
-tax = 15.0
-tip = 7.5
+# Prompt user to enter the value of the meal tax and tip
+meal = float(raw_input("Please enter cost of your meal:"))
+tax = float(raw_input("Please enter the tax %:"))
+tip = float(raw_input("Please enter the tip rate:"))
 
 # create variable tax_value for the tax value on the meal
 tax_value = meal * (tax / 100)
