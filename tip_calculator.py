@@ -28,4 +28,4 @@ print "You have to pay ${0:.2f} tax on your meal".format(tax_value)
 print "You have to pay ${0:.2f} in tips based on {1}% rate".format(tip_value, tip)
 
 # print grand total for meal
-print "The grand total for your meal is ${:.2f}".format(total)
+print "The grand total for your meal is ${0:.2f}".format(total)
