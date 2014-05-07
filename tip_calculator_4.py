@@ -13,6 +13,10 @@ parser.add_option("-t", "--third", dest="tip", help="tip %", default="4.5", type
 
 (options, args) = parser.parse_args()
 
+# raise error message if no meal value supplied
+if not options.meal:
+    parser.error("You need to enter a value for the meal after the '-f' switch")
+
 # assign the tax * meal to the variable tax_value
 tax_value = options.meal * (options.tax / 100.0)
 
