@@ -1,22 +1,21 @@
 import sys
 from tip_cal_functions import calculate_rate, calculate_meal_costs
-import pdb
+# import pdb
 
 # display a friendly error message if a ValueError exception is raised
 
 def main():
-    while True:
+    done = False
+    while not done:
         try:
             # assign user inputs for the cost of the meal, tax rate and tip rate
-            #pdb.set_trace()
             meal = float(sys.argv[1])
             tax_rate = float(sys.argv[2])
             tip_rate = float(sys.argv[3])
-            break
 
+            done = True
 
         except ValueError:
-
             print "Please enter a valid number for all your input parameters"
             meal = float(raw_input("Please enter a valid amount for the meal:"))
             tax_rate = float(raw_input("Please enter a valid amount for the tax rate:"))
@@ -32,7 +31,7 @@ def main():
     print "You need to pay ${:.2f} for tax".format(meal_info['tax_value'])
     print "Tipping at a rate of {0}%, you should pay ${1:.2f} in tips".format(int(100 * meal_info['tip_rate']),
                                                                               meal_info['tip_value'])
-    print "The grand total for you meal is ${:.2f}".format(meal_info['total'])
+    print "The grand total for your meal is ${:.2f}".format(meal_info['total'])
 
 
 if __name__ == '__main__':
